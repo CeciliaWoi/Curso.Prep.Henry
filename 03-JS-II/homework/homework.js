@@ -216,7 +216,7 @@ function doWhile(numero) {
   var suma = numero;
   var i = 1
   do {
-    suma = suma + 5;
+    suma += 5;
     i++;
   } while ( i <= 8);
   return suma;
