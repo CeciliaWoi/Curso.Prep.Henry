@@ -5,15 +5,10 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-  if (x === y) {
-    return x || y;
-  }
   if (x > y) {
     return x;
   }
-  if (y > x) {
-    return y;
-  }
+  return y;
 }
 
 function mayoriaDeEdad(edad) {
@@ -121,7 +116,11 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if ((numero % 3 === 0) && (numero % 5 === 0)) {
+  
+  // NOTAS PERSONALES:
+  // Puedo pensar ¿Cuál es el primer divisor en común que tienen 3 y 5? 15, y me ahorro más código, nos lo simplifica.
+ 
+  if (numero % 15 === 0) {
     return "fizzbuzz"
   }
   if (numero % 3 === 0) {
@@ -141,15 +140,22 @@ function operadoresLogicos(num1, num2, num3) {
 
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
 
+  
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+  
+  // NOTAS PERSONALES:
+  // Primero pregunto si alguno es 0
+  // Después pregunto si alguno es negativo
+  // Luego, una vez que sé que ninguno es 0 ni negativo, pregunto si num1 es mayor a 2 y 3.
+
+  if ((num1 === 0) || (num2 === 0) || (num3 === 0)) {
+    return "Error";
+  }
   if ((num1 < 0) || (num2 < 0) || (num3 < 0)) {
     return "Hay negativos";
   }
   if ((num1 > num2) && (num1 > num3) && (num1 > 0)) {
     return "Número 1 es mayor y positivo";
-  }
-  if ((num1 === 0) || (num2 === 0) || (num3 === 0)) {
-    return "Error";
   }
   if ((num3 > num1) && (num3 > num2)) {
     return (num3 +1);
@@ -189,6 +195,10 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí
+
+  // NOTAS PERSONALES:
+  // También lo puedo hacer tabla6.push(6*1), que va a ir agregando cada resultado al final del array vacío que creamos al principio.
+  
   var tabla6 = []
   for ( var i=0; i <=10 ; i++) {
     tabla6[i] = 6 * i;
