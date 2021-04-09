@@ -188,12 +188,6 @@ function todosIguales(arreglo) {
 } 
 
 
-function mesesDelAño(array) {
-  //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
-  // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
-  //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
-  // Tu código:
-
   function mesesDelAño(array) {
     //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
     // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
@@ -201,11 +195,11 @@ function mesesDelAño(array) {
     // Tu código:
     var months = [];
     for (var i=0; i < array.length; i++) {
-      if ((array[i] === "Enero") || (array[i] === "Marzo") || (array[i] === "Noviembre")) {
-      months.push("Enero", "Marzo", "Noviembre");
+      if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre") {
+      months.push(array[i]);
       }
     }
-    if (months === ["Enero", "Marzo", "Noviembre"]) {
+    if (months.length === 3) {
       return months;
     }
     return "No se encontraron los meses pedidos";
@@ -219,7 +213,7 @@ function mayorACien(array) {
   var int = [];
   for (var i=0; i < array.length; i++) {
     if (array[i] > 100) {
-      int = i > 100;
+      int.push(array[i]);
     }
   }
   return int;
@@ -234,6 +228,16 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  array = [];
+  for ( var i=0; i < 10; i++) {
+    numero + 2 === array[i];
+    numero += array[i];
+    if ( suma === 10) {
+      break;
+    }
+    return "Se interrumpió la ejecución";
+  }
+  return array;
 }
 
 
