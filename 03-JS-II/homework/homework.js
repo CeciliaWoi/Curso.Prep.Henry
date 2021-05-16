@@ -117,8 +117,8 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
   
-  // NOTAS PERSONALES:
-  // Puedo pensar ¿Cuál es el primer divisor en común que tienen 3 y 5? 15, y me ahorro más código, nos lo simplifica.
+  // PERSONAL NOTES:
+  // I can think, which is the first divider in common that 3 and 5 have? 15, and it's saving code.
  
   if (numero % 15 === 0) {
     return "fizzbuzz"
@@ -143,10 +143,10 @@ function operadoresLogicos(num1, num2, num3) {
   
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   
-  // NOTAS PERSONALES:
-  // Primero pregunto si alguno es 0
-  // Después pregunto si alguno es negativo
-  // Luego, una vez que sé que ninguno es 0 ni negativo, pregunto si num1 es mayor a 2 y 3.
+  // PERSONAL NOTES:
+  // First I ask if any is 0.
+  // Then, I ask if any is negative.
+  // By last, one time I know that neither is 0 or negative, I ask if num1 is greater than 2 and 3.
 
   if ((num1 === 0) || (num2 === 0) || (num3 === 0)) {
     return "Error";
@@ -196,8 +196,8 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí
 
-  // NOTAS PERSONALES:
-  // También lo puedo hacer tabla6.push(6*1), que va a ir agregando cada resultado al final del array vacío que creamos al principio.
+  // PERSONAL NOTES:
+  // I can do tabla6.push(6*1) too, it will be adding each result to the end of the empty array that we create at the begining.
   
   var tabla6 = []
   for ( var i=0; i <=10 ; i++) {
