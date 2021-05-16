@@ -128,7 +128,7 @@ function multiplicarArgumentos() {
   }
   var product = 1;
   for (var i=0; i < arguments.length; i++) {
-    product = product * arguments[i]
+    product = product * arguments[i];
   }
   return product;
 }
@@ -152,8 +152,8 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
 
-  // NOTAS PERSONALES:
-  // No es necesario crear un segundo if, indicando si numeroDeDia es >= 2 o <= a 6 (Ahorro código)
+  // PERSONAL NOTES:
+  // It is not necessary to create a second if, indicating id numeroDeDia is >= 2 o <= a 6 (Saving code)
 
   //Escribe tu código aquí
   if ((numeroDeDia === 1) || (numeroDeDia === 7)) {
@@ -228,15 +228,31 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  //
+  // ANOTHER OPTION WITHOUT BREAK STATEMENT:
+  // var array = [];
+  // for (var i=0; i < 10; i++) {
+  //   numero += 2;
+  //   array.push(numero);
+  //   if (array[i] === 10) {
+  //     return "Se interrumpió la ejecución";
+  //   }
+  // }
+  // return array;
   var array = [];
   for (var i=0; i < 10; i++) {
-    numero += 2;
-    array.push(numero);
-    if (array[i] === 10) {
-      return "Se interrumpió la ejecución";
+    numero +=2;
+    if (numero === i) break;
+    else {
+      array.push(numero);
     }
   }
-  return array;
+  if(i < 10) {
+    return "Se interrumpió la ejecución";
+  }
+  else {
+    return array;
+  }
 }
 
 
@@ -249,15 +265,16 @@ function continueStatement(numero) {
   // Tu código:
   var array = [];
   for (var i=0; i < 10; i++) {
-    numero += 2;
-    array.push(numero);
-    if (array[i] === 5) {
-      continue;
+    if (i === 5) continue;
+    else {
+      numero += 2;
+      array.push(numero);
     }
   }
   return array;
 }
 
+//  NOTES:
 //  i = 0;
 //  n = 0;
 //  while (i < 5) {
