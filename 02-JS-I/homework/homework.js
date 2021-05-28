@@ -35,7 +35,7 @@ function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-  return x + y ;
+  return x + y;
 }
 
 function resta(x, y) {
@@ -101,7 +101,7 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num % 2 === 1;
+  return num % 2 != 0;
 }
 
 function elevarAlCuadrado(num) {
@@ -147,10 +147,10 @@ function esPositivo(numero) {
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
   if (numero > 0) {
-    return 'Es positivo';
+    return "Es positivo";
   }
   if (numero < 0) {
-    return 'Es negativo';
+    return "Es negativo";
   }
   return false;
 }
@@ -179,7 +179,7 @@ function obtenerSaludo(nombre) {
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
-  return ancho * alto;
+  return alto * ancho;
 }
 
 
@@ -211,11 +211,11 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí
   if (letra.length > 1) {
-    return "Dato incorrecto";
+    return 'Dato incorrecto';
   }
-  if ( letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u' ) {
-    return "Es vocal";
-  } 
+  if ((letra === 'a') || (letra === 'e') || (letra === 'i') || (letra === 'o') || (letra === 'u')) {
+    return 'Es vocal';
+  }
 }
 
 
